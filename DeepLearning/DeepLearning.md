@@ -32,9 +32,11 @@
 ## 全连接神经网络/多层感知机
 
 输入：一个一维向量，输出：一个一维向量，各个类别的概率。
+
 $$
 \boldsymbol{z}^{\left( l \right)}=\boldsymbol{W}^{\left( l \right)}\boldsymbol{a}^{\left( l-1 \right)}+\boldsymbol{b}^{\left( l \right)}
 $$
+
 ![image-20240319105204592](./assets/image-20240319105204592.png)
 
 ![100048258-92766-1](./assets/100048258-92766-1.jpg)
@@ -49,9 +51,11 @@ $$
 - 局部不变性：缩放、平移、旋转等不影响语义信息。
 
 输入：C×H×W三维矩阵，最后一层为全连接层，输出类别。
+
 $$
 \boldsymbol{z}^{\left( l \right)}=\boldsymbol{W}^{\left( l \right)}\otimes \boldsymbol{a}^{\left( l-1 \right)}+\boldsymbol{b}^{\left( l \right)}
 $$
+
 卷积层的性质：
 
 - 局部连接
