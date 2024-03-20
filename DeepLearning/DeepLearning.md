@@ -121,3 +121,29 @@ $$
 
 - 残差网络：上百层
 - 全卷积、空洞卷积
+
+## 生成对抗网络
+
+输入：普通数据分布，输出：数据分布。
+
+![image-20240320170428697](./assets/image-20240320170428697.png)
+
+网络结构：
+
+![image-20240320170732362](./assets/image-20240320170732362.png)
+
+Discriminator的目标函数：
+
+$$
+ D ^ { * } = a r g \max _ { D } V ( D , G )
+$$
+
+$$
+V\left( G,D \right) =E_{y\sim P_{data}}\left[ \log D\left( y \right) \right] +E_{y\sim P_G}\left[ \log \left( 1-D\left( y \right) \right) \right]
+$$
+
+Generator:
+
+$$
+G^*=arg\min_G\max_DV\left( D,G \right)
+$$
