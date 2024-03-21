@@ -1,6 +1,6 @@
 # Deep Learning
 
-> 参考：https://nndl.github.io/
+> 参考：<https://nndl.github.io/>
 
 ## 机器学习基础
 
@@ -67,7 +67,7 @@ $$
 
 ### 卷积运算的实现
 
-> 参考：https://github.com/dlsyscourse/public_notebooks/blob/main/convolution_implementation.ipynb
+> 参考：<https://github.com/dlsyscourse/public_notebooks/blob/main/convolution_implementation.ipynb>
 
 一维卷积作为矩阵乘法：
 
@@ -84,7 +84,8 @@ $$
 二维卷积作为矩阵乘法：
 
 1. 迭代卷积核的维数
-   ```
+
+   ```python
    # 1×1卷积核
    Z = np.random.randn(10,32,32,8)
    W1 = np.random.randn(1,1,8,16)
@@ -102,7 +103,8 @@ $$
    ```
 
 2. 跨步矩阵乘法：利用tile存储，实现im2col卷积
-   ```
+
+   ```python
    def conv_im2col(Z, weight):
        N,H,W,C_in = Z.shape
        K,_,_,C_out = weight.shape
@@ -147,3 +149,45 @@ Generator:
 $$
 G^*=arg\min_G\max_DV\left( D,G \right)
 $$
+
+## Self-attention
+
+考虑了window也不能解决。
+
+![image-window](./assets/image-window.png)
+
+![image-self-attention](./assets/image-self-attention.png)
+
+Self-attention可以和FC交替使用，堆叠多层。
+
+Self-attention module：
+
+![image-sa-module](./assets/image-sa-module.png)
+
+![image-qk](./assets/image-qk.png)
+
+![image-qkv](./assets/image-qkv.png)
+
+从矩阵乘法的角度看待Self-attention：
+
+$$
+q^i=W^qa^i,\left[ q^1,q^2,q^3,q^4 \right] =W^q\left[ a^1,a^2,a^3,a^4 \right]
+$$
+
+$$
+A=K^TQ
+$$
+
+$$
+O=VA^,
+$$
+
+输入：矩阵（一个词为一个列向量），输入：相同大小的矩阵，$W^q,W^k,W^v$为需要学习的参数。
+
+多头注意力：
+
+![image-multi-head](./assets/image-multi-head.png)
+
+### Self-attention Vs. RNN
+
+![image-sa-vs-rnn](./assets/image-sa-vs-rnn.png)
