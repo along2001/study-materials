@@ -150,7 +150,32 @@ $$
 G^*=arg\min_G\max_DV\left( D,G \right)
 $$
 
-## Self-attention
+## 循环神经网络
+
+神经网络有短期记忆力。输入：时序数据，输出有三种模式。RNN可以近似任意的非线性动力系统。
+
+$$
+h_t=f\left( Uh_{t-1}+Wx_t+b \right)
+$$
+
+RNN输出的三种模式：
+
+- 序列到类别
+    ![image-rnn-case](./assets/image-rnn-case.png)
+- 同步的序列到序列
+    ![image-rnn-seq2seq](./assets/image-rnn-seq2seq.png)
+- 异步的序列到序列（编码器-解码器）
+    ![image-rnn-aseq2seq](./assets/image-rnn-aseq2seq.png)
+
+### 堆叠循环神经网络、双向循环神经网络
+
+![image-multi-rnn](./assets/image-multi-rnn.png)
+
+![image-rnn-bd](./assets/image-rnn-bd.png)
+
+### LSTM
+
+## 自注意力机制
 
 考虑了window也不能解决。
 
