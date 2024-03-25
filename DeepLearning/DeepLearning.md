@@ -175,6 +175,10 @@ RNN输出的三种模式：
 
 ### LSTM
 
+### Learning
+
+BPTT和RTRL
+
 ## 自注意力机制
 
 考虑了window也不能解决。
