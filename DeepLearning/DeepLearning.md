@@ -1,6 +1,6 @@
 # Deep Learning
 
-> 参考：<https://nndl.github.io/>
+> 参考：<https://nndl.github.io/>，<https://github.com/mli/paper-reading?tab=readme-ov-file>
 
 ## 机器学习基础
 
@@ -177,7 +177,7 @@ RNN输出的三种模式：
 
 ### Learning
 
-BPTT和RTRL
+BPTT和RTRL。
 
 ## 自注意力机制
 
@@ -220,3 +220,7 @@ $$
 ### Self-attention Vs. RNN
 
 ![image-sa-vs-rnn](./assets/image-sa-vs-rnn.png)
+
+## Transformer
+
+## 自编码器
