@@ -223,4 +223,24 @@ $$
 
 ## Transformer
 
+包含一个Encoder和一个Decoder。Encoder读取一段Sequence，输出一排特征向量。
+
+Encoder架构：
+
+![image-trans-en](./assets/image-trans-en.png)
+
+Block还中包含了残差连接和Layer Norm。
+
+Decoder架构：
+
+![image-trans-de](./assets/image-trans-de.png)
+
+Decoder中使用的是Masked Self-attention。
+
+Encoder和Decoder之间使用Cross attention：
+
+![image-cross-attention](./assets/image-cross-attention.png)
+
+在训练的时候，Decoder是能看到正确答案的。
+
 ## 自编码器
